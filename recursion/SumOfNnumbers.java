@@ -23,8 +23,6 @@ public class SumOfNnumbers {
 			System.out.println(sum);
 			return;
 		}
-		sum1(i-1,sum+i);
-		
-			
+		sum1(i-1,sum+i);		
 	}
 }
