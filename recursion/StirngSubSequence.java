@@ -19,10 +19,5 @@ public class StirngSubSequence {
 		sub(i+1,a,s,n);
 		a=a+s.charAt(i);
 		sub(i+1,a,s,n);
-		
-		
-		
-		
 	}
-
 }

@@ -15,13 +15,10 @@ public class ReverseAnArray {
 	{
 		if(i>=n/2)
 			return ;
-		int temp=arr[i];
-		arr[i]=arr[n-i-1];
-		arr[n-i-1]=temp;
+			int temp=arr[i];
+			arr[i]=arr[n-i-1];
+			arr[n-i-1]=temp;
 		reverse(i+1,arr,n);
 	}
-	static void swap(int a,int b)
-	{
-		
-	}
+	
 }
