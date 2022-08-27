@@ -1,7 +1,5 @@
 package recursion;
 
-import java.util.ArrayList;
-
 public class CountAllSubsequenceWithGivenSum {
 
 	public static void main(String[] args) {
@@ -14,12 +12,13 @@ public class CountAllSubsequenceWithGivenSum {
 	}
 	public static int sumSubSequence(int i,int sum,int n,int[] arr,int s)
 	{
+		//condition not satisfied
+		if(s>sum) return 0;
 		if(i==n)
 		{
 			//condition statisfied
 			if(s==sum)
 			{
-				
 				return 1;
 			}
 			//condition not satisfied
@@ -29,7 +28,6 @@ public class CountAllSubsequenceWithGivenSum {
 	
 		s=s+arr[i];
 		int l=(sumSubSequence(i+1,sum,n,arr,s));
-		
 		s=s-arr[i];
 		int r=(sumSubSequence(i+1,sum,n,arr,s));
 		return l+r;
