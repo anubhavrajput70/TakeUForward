@@ -24,9 +24,6 @@ public class PalindromePartitioning {
 		{
 			if(isPalindrome(ind,i,s))
 			{
-
-				System.out.println();
-				System.out.print(ind+" "+i);
 				temp.add(s.substring(ind,i+1));
 				partition(i+1,n,s,ans,temp);
 				temp.remove(temp.size()-1);

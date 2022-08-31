@@ -6,13 +6,13 @@ public class AllSubsequence {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int arr[]= {3,1,2};
+		int arr[]= {1,2,3};
 		int n=3;
 		ArrayList<Integer> al=new ArrayList<>();
 		subSequence(0,al,arr,n);	
 	}
 	static void subSequence(int i,ArrayList<Integer> al,int arr[],int n) {
-		if(i==n)
+		if(i>=n)
 		{
 			System.out.println(al);
 			return;

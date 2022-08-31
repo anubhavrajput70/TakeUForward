@@ -13,7 +13,9 @@ public class NthFibonacci {
 			return n;
 		int first=fib(n-1);
 		int second=fib(n-2);
+	
 		return first+second;
+		
 	}
 
 }

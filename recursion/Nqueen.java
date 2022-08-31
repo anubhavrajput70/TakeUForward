@@ -12,6 +12,7 @@ public class Nqueen {
 			for(int j=0;j<arr.length;j++)
 			arr[i][j]='.';
 		}
+		
 		nQueen(0,arr,n);	
 	}
 	static void nQueen(int col,char[][] arr,int n)

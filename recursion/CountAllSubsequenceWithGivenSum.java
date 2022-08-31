@@ -25,7 +25,6 @@ public class CountAllSubsequenceWithGivenSum {
 			else
 			return 0;
 	    }
-	
 		s=s+arr[i];
 		int l=(sumSubSequence(i+1,sum,n,arr,s));
 		s=s-arr[i];
