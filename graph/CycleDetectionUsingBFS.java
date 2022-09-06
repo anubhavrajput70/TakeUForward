@@ -34,9 +34,8 @@ public class CycleDetectionUsingBFS {
 				if(isCyclePresent(i,adj,vis))
 					return true;
 			}
-		}
-	
-		return false;
+		} 
+	return false;
 	}
 	static boolean isCyclePresent(int v,ArrayList<ArrayList<Integer>> adj,boolean vis[])
 	{
