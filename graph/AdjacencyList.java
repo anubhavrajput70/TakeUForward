@@ -6,7 +6,7 @@ public class AdjacencyList {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n=3,m=3;
+		int n=3;
 		ArrayList<ArrayList<Integer>> adj=new ArrayList<ArrayList<Integer>>();
 		for(int i=0;i<=n;i++)
 			adj.add(new ArrayList<Integer>());
