@@ -22,7 +22,7 @@ public class AdjacencyList {
 		adj.get(1).add(3);
 		adj.get(3).add(1);
 		
-		for(int i=1;i<n;i++)
+		for(int i=1;i<=n;i++)
 		{
 			for(int j=0;j<adj.get(i).size();j++)
 			{

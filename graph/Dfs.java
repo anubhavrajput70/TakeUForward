@@ -16,8 +16,6 @@ public class Dfs {
 		addEdge(adj,4,6);
 		addEdge(adj,3,5);
 		addEdge(adj,7,6);
-		for(int i=1;i<=n;i++)
-		
 		dfsOfGraph( n,adj);
 		
 	
