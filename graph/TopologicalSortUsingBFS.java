@@ -1,9 +1,11 @@
 package graph;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
-public class TopologicalSortUsingDFS {
+public class TopologicalSortUsingBFS {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -22,38 +24,43 @@ public class TopologicalSortUsingDFS {
 	}
 	static void topoSort(int v,ArrayList<ArrayList<Integer>> adj)
 	{
-		Stack<Integer> s=new Stack<Integer>();
-		int[] vis=new int[v];
+		int[] topo=new int[v];
+		int[] indegree=new int[v];
 		for(int i=0;i<v;i++)
 		{
-			if(vis[i]==0)
+			for(Integer it :adj.get(i))
 			{
-				dfs(i,adj,vis,s);
+				indegree[it]++;
 			}
 		}
+		Queue<Integer> q=new LinkedList<>();
+		for(int i=0;i<v;i++)
+		{
+			if(indegree[i]==0)
+			{
+				q.add(i);
+			}
+		}
+		int ind=0;
+		while(!q.isEmpty())
+		{
+			Integer node=q.poll();
+			topo[ind++]=node;
+			for(Integer it: adj.get(node))
+			{
+				indegree[it]--;
+				if(indegree[it]==0)
+				{
+					q.add(it);
+				}
+			}
+		}
+		for(int i=0;i<v;i++)
+			System.out.print(topo[i]+" ");
+	}
 		
-		int[] topo=new int[v];
-		int i=0;
-		while(!s.isEmpty())
-		{
-			topo[i++]=s.pop();
-		}
-		for(int j=0;j<v;j++)
-			System.out.print(topo[j]+" ");
-	}
-	static void dfs(int v,ArrayList<ArrayList<Integer>> adj,int[] vis,Stack<Integer> s)
-	{
-		vis[v]=1;
-		for(Integer it:adj.get(v))
-		{
-			if(vis[it]==0)
-				dfs(it,adj,vis,s);
-		}
-		s.push(v);
-	}
 	static void addEdge(ArrayList<ArrayList<Integer>> am, int s, int d) {
 	    am.get(s).add(d);
 	    
 	  }
-
 }
