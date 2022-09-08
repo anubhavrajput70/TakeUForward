@@ -11,26 +11,26 @@ public class CheckBipartiteUsingDFS {
 		for(int i=0;i<=n;i++)
 			adj.add(new ArrayList<Integer>());
 		//non bipartite graph node
-//		addEdge(adj,1,2);
-//		addEdge(adj,2,3);
-//		addEdge(adj,3,4);
-//		addEdge(adj,4,5);
-//		addEdge(adj,5,6);
-//		addEdge(adj,6,7);
-//		addEdge(adj,2,8);
-//		addEdge(adj,8,5);
+		addEdge(adj,1,2);
+		addEdge(adj,2,3);
+		addEdge(adj,3,4);
+		addEdge(adj,4,5);
+		addEdge(adj,5,6);
+		addEdge(adj,6,7);
+		addEdge(adj,2,8);
+		addEdge(adj,8,5);
 
 
 		//  bipartite graph nodes
-		addEdge(adj,1,2);
-		addEdge(adj,2,3);
-		
-		addEdge(adj,3,4);
-		addEdge(adj,4,5);
-		addEdge(adj,5,8);
-		addEdge(adj,5,6);
-		addEdge(adj,6,7);
-		addEdge(adj,7,2);
+//		addEdge(adj,1,2);
+//		addEdge(adj,2,3);
+//		
+//		addEdge(adj,3,4);
+//		addEdge(adj,4,5);
+//		addEdge(adj,5,8);
+//		addEdge(adj,5,6);
+//		addEdge(adj,6,7);
+//		addEdge(adj,7,2);
 		if(checkBipartite(n,adj))
 			System.out.println("yes bipartite");
 		else

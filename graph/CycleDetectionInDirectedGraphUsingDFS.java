@@ -58,7 +58,6 @@ public class CycleDetectionInDirectedGraphUsingDFS {
 		return false;
 	}
 	static void addEdge(ArrayList<ArrayList<Integer>> am, int s, int d) {
-	    am.get(s).add(d);
-	    
+	    am.get(s).add(d);  
 	  }
 }
