@@ -1,26 +1,29 @@
 package graph;
-import java.util.*;
 
-public class TopologicalSortUsingBFS {
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+//it is not a solution its a hack but it works
+public class CycleDetectionInDirectedGraphUsingBFS {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+
 		int n=6;
 		ArrayList<ArrayList<Integer>> adj=new ArrayList<ArrayList<Integer>>();
 		for(int i=0;i<=n;i++)
 			adj.add(new ArrayList<Integer>());
 		
-		addEdge(adj,5,0);
-		addEdge(adj,5,2);
+		addEdge(adj,1,2);
 		addEdge(adj,2,3);
-		addEdge(adj,3,1);
-		addEdge(adj,4,1);
-		addEdge(adj,4,0);
+		addEdge(adj,3,4);
+		addEdge(adj,4,2);
+		
 		topoSort( n,adj);
 	}
 	static void topoSort(int v,ArrayList<ArrayList<Integer>> adj)
 	{
-		int[] topo=new int[v];
+
 		int[] indegree=new int[v];
 		//for calculating indegree of every node
 
@@ -39,11 +42,12 @@ public class TopologicalSortUsingBFS {
 				q.add(i);
 			}
 		}
-		int ind=0;
+		
+		int count=0;
 		while(!q.isEmpty())
 		{
 			Integer node=q.poll();
-			topo[ind++]=node;
+			count++;
 			for(Integer it: adj.get(node))
 			{
 				indegree[it]--;
@@ -53,12 +57,16 @@ public class TopologicalSortUsingBFS {
 				}
 			}
 		}
-		for(int i=0;i<v;i++)
-			System.out.print(topo[i]+" ");
+		if(v==count)
+			System.out.println("not contain a cycle");
+		else
+			System.out.println("cyclic");
+			
 	}
 		
 	static void addEdge(ArrayList<ArrayList<Integer>> am, int s, int d) {
 	    am.get(s).add(d);
 	    
 	  }
+
 }
