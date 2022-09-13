@@ -32,6 +32,7 @@ public class TopologicalSortUsingBFS {
 			}
 		}
 		Queue<Integer> q=new LinkedList<>();
+		//adding all the node to the queue which have indegree is zero
 		for(int i=0;i<v;i++)
 		{
 			if(indegree[i]==0)
