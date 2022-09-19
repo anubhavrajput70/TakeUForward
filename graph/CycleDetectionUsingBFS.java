@@ -1,8 +1,6 @@
 package graph;
 
 import java.util.*;
-
-
 public class CycleDetectionUsingBFS {
 
 	public static void main(String[] args) {

@@ -30,7 +30,7 @@ public class AdjacencyList {
 			}
 			System.out.println();
 		}
-;	}
+	}
 	
 
 }

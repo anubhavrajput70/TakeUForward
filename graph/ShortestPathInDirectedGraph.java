@@ -70,7 +70,7 @@ public class ShortestPathInDirectedGraph {
 		while(stack.empty()==false)
 		{
 			int node=(int)stack.pop();
-			//if node reached previousl
+			//if node reached previous
 			if(dist[node]!=Integer.MAX_VALUE)
 			{
 				for(Pair it:adj.get(node))
