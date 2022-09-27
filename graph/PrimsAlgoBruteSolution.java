@@ -3,11 +3,12 @@ package graph;
 import java.util.ArrayList;
 
 public class PrimsAlgoBruteSolution {
-	static class node
+ static class Node
 	{
 		private int v;
 		private int weight;
-		public node(int v, int weight) {
+		public Node(int v, int weight)
+		{
 			this.v = v;
 			this.weight = weight;
 		}
@@ -75,7 +76,5 @@ public class PrimsAlgoBruteSolution {
 	static void addEdge(ArrayList<ArrayList<Node>> am, int s, int d,int w) {
 	    am.get(s).add(new Node(d,w));
 	    am.get(d).add(new Node(s,w));
-	    
-	   
 	  }
 }

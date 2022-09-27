@@ -1,38 +1,38 @@
 package graph;
 
 import java.util.*;
-class Node implements Comparator<Node>
-{
-	private int v;
-	private int weight;
-	Node(int _v,int _w)
-	{
-		v=_v;
-		weight=_w;
-	}
-	Node()
-	{}
-	int getV()
-	{
-		return v;
-	}
-	int getWeight()
-	{
-		return weight;
-	}
-	@Override
-	public int compare(Node node1,Node node2)
-	{
-		if(node1.weight<node2.weight)
-			return -1;
-		if(node1.weight>node2.weight)
-			return 1;
-		return 0;
-	}
-}
+
 
 public class DijkstraAlgorithm {
-
+	static class Node implements Comparator<Node>
+	{
+		private int v;
+		private int weight;
+		Node(int _v,int _w)
+		{
+			v=_v;
+			weight=_w;
+		}
+		Node()
+		{}
+		int getV()
+		{
+			return v;
+		}
+		int getWeight()
+		{
+			return weight;
+		}
+		@Override
+		public int compare(Node node1,Node node2)
+		{
+			if(node1.weight<node2.weight)
+				return -1;
+			if(node1.weight>node2.weight)
+				return 1;
+			return 0;
+		}
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int n=5;

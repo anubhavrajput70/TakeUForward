@@ -47,8 +47,7 @@ public class ShortestPathInUndirectedGraph {
 					dis[it]=dis[node]+1;
 				q.add(it);
 				}
-			}
-			
+			}		
 		}
 		for(int i=0;i<v;i++)
 			System.out.print(dis[i]+" ");
