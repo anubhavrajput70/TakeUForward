@@ -6,7 +6,6 @@ public class FibTabulation {
 		// TODO Auto-generated method stub
 		int n=5;
 		int[] dp=new int[n+1];
-		
 		fibdp(n,dp);
 	}
 	static void fibdp(int n,int dp[])
