@@ -21,7 +21,6 @@ public class MaxSumOfNonAdjacentSpaceOptimized {
 				int curr=Math.max(pick,notPick);
 				prev2=prev;
 				prev=curr;
-				
 			}
 			return prev;
 		}

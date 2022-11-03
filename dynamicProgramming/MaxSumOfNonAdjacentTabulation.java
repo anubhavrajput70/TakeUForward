@@ -15,7 +15,6 @@ public class MaxSumOfNonAdjacentTabulation {
 	static int maxSum(int n,int[] arr,int[] dp)
 	{
 		dp[0]=arr[0];
-		
 		for(int i=1;i<n;i++)
 		{
 			int pick=arr[i];
