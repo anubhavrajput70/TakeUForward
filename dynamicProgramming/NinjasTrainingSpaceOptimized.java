@@ -1,7 +1,5 @@
 package dynamicProgramming;
 
-import java.util.Arrays;
-
 public class NinjasTrainingSpaceOptimized {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
